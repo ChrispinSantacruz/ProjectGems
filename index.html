@@ -246,45 +246,92 @@
         </nav>        <!--Nav End-->
       </div>
       <div class="container-fluid content-inner pb-0">
+        <style>
+            /* Sobrescribir el min-height */
+            .main-content .content-inner {
+                min-height: auto !important;
+            }
+    
+            /* Estilo para las imágenes */
+            .banner-img {
+                object-fit: cover;
+                width: 100%;
+            }
+    
+            /* Ajuste responsivo para el tamaño de las imágenes */
+            .banner-main {
+                max-height: 450px; /* Tamaño principal para pantallas grandes */
+            }
+    
+            .banner-secondary {
+                max-height: 300px;
+            }
+    
+            /* Margen reducido entre las tarjetas */
+            .card {
+                margin-bottom: 10px !important;
+            }
+    
+            @media (max-width: 768px) {
+                /* Asegurar que todas las imágenes sean proporcionales en pantallas pequeñas */
+                .banner-main, .banner-secondary {
+                    max-height: 300px;
+                }
+            }
+        </style>
+    
+        <!-- Banner principal (1x1 en pantallas pequeñas, 1x2 en pantallas grandes) -->
         <div class="row">
-            <div class="col-12">
+            <div class="col-md-12 col-12">
                 <div class="card p-2">
                     <div class="card-body p-0">
                         <div class="row">
                             <div class="col-12 text-center">
-                                <img src="img/BANNERXL_01.png" class="img-fluid w-100" alt="Bitcoin Image" style="max-height: 300px; object-fit: cover;">
+                                <img src="img/BANNERXL_01.png" 
+                                     class="img-fluid banner-img banner-main" 
+                                     alt="Bitcoin Image">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
+    
+        <!-- Banners secundarios (2x1 y 2x2) -->
         <div class="row">
-            <div class="col-6">
+            <!-- Imagen secundaria izquierda (2x1) -->
+            <div class="col-md-6 col-12">
                 <div class="card p-2">
                     <div class="card-body p-0">
                         <div class="row">
                             <div class="col-12 text-center">
-                                <img src="img/MANNERSM_02.png" class="img-fluid w-100" alt="Bitcoin Image" style="max-height: 300px; object-fit: cover;">
+                                <img src="img/MANNERSM_02.png" 
+                                     class="img-fluid banner-img banner-secondary" 
+                                     alt="Bitcoin Image">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+    
+            <!-- Imagen secundaria derecha (2x2) -->
+            <div class="col-md-6 col-12">
                 <div class="card p-2">
                     <div class="card-body p-0">
                         <div class="row">
                             <div class="col-12 text-center">
-                                <img src="img/MANNERSM_02.png" class="img-fluid w-100" alt="Bitcoin Image" style="max-height: 300px; object-fit: cover;">
+                                <img src="img/MANNERSM_02.png" 
+                                     class="img-fluid banner-img banner-secondary" 
+                                     alt="Bitcoin Image">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
+    </div>
+    
+    
         <!-- Topbar Chart -->
         <div class="topbar-chart iq-chart">
             <div class="container-fluid">
@@ -317,7 +364,59 @@
         
         
  <div class="col-lg-8" style="width: 100%; position: relative; padding: 0;">
-    <div class="row" style="margin: 0; padding: 0;">
+    <style>
+        /* Estilos generales */
+        .latest-release h4 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .latest-release .card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .latest-release .card-header img {
+            height: 180px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .latest-release h6 {
+            font-size: 1rem;
+            line-height: 1.2;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .latest-release .card-body {
+            font-size: 0.875rem;
+        }
+
+        .swiper-container {
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            /* Modo responsive: mostrar una sola tarjeta visible */
+            .swiper-slide {
+                width: 100% !important; /* Una tarjeta ocupa todo el ancho */
+            }
+
+            .latest-release h6 {
+                font-size: 0.9rem;
+                white-space: normal; /* Permitir multilinea */
+                overflow: visible;
+            }
+
+            .latest-release .card-header img {
+                height: 150px; /* Reducir altura en móvil */
+            }
+        }
+    </style>
+
+    <div class="row latest-release" style="margin: 0; padding: 0;">
         <div class="col-lg-12">
             <div class="d-flex justify-content-between py-4">
                 <h4>Latest Release</h4>
@@ -337,6 +436,7 @@
             </div>
             <div class="swiper-container d-slider2" style="width: 100%; height: 100%;">
                 <div class="swiper-wrapper">
+                    <!-- Tarjeta 1 -->
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="card-header">
@@ -350,13 +450,14 @@
                                 <h6 class="mt-3 mb-0">What Are NFT Games and How Do They Work?</h6>
                             </div>
                             <div class="card-body d-flex align-items-center gap-4">
-                                <p class="ms-1 mb-0">Sep 2,2021</p>                           
+                                <p class="ms-1 mb-0">Sep 2, 2021</p>                           
                                 <div class="d-flex align-items-center">
                                     <p class="ms-1 mb-0">5m</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Tarjeta 2 -->
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="card-header">
@@ -370,13 +471,14 @@
                                 <h6 class="mt-3 mb-0">What are other functions of crypto currencies?</h6>
                             </div>
                             <div class="card-body d-flex align-items-center gap-4">
-                                <p class="ms-1 mb-0">Sep 2,2021</p>                           
+                                <p class="ms-1 mb-0">Sep 2, 2021</p>                           
                                 <div class="d-flex align-items-center">
                                     <p class="ms-1 mb-0">8m</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Tarjeta 3 -->
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="card-header">
@@ -390,29 +492,9 @@
                                 <h6 class="mt-3 mb-0">What Is QuickSwap and How Does It Work?</h6>
                             </div>
                             <div class="card-body d-flex align-items-center gap-4">
-                                <p class="ms-1 mb-0">Sep 2,2021</p>                           
+                                <p class="ms-1 mb-0">Sep 2, 2021</p>                           
                                 <div class="d-flex align-items-center">
                                     <p class="ms-1 mb-0">6m</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="img/news_GH_1.png" class="img-fluid" alt="img8">
-                                <div class="mt-4">
-                                    <span type="button" class="d-flex align-items-center">
-                                    <svg width="7" class="me-1 text-center" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="3.5" cy="4" r="3.5" fill="#ff971d"/>
-                                    </svg><span class="text-primary ms-1">Beginner</span></span>
-                                </div>
-                                <h6 class="mt-3 mb-0">What Are NFT Games and How Do They Work?</h6>
-                            </div>
-                            <div class="card-body d-flex align-items-center gap-4">
-                                <p class="ms-1 mb-0">Sep 2,2021</p>                           
-                                <div class="d-flex align-items-center">
-                                    <p class="ms-1 mb-0">5m</p>
                                 </div>
                             </div>
                         </div>
