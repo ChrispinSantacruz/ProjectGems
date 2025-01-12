@@ -33,230 +33,159 @@
         
        <!--Nav Start-->
 <!--Nav Start-->
-<nav class="nav navbar navbar-expand-lg navbar-light iq-navbar border-bottom pb-lg-3 pt-lg-3">
-    <div class="container-fluid navbar-inner">
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-light iq-navbar border-bottom pb-lg-3 pt-lg-3">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+        <!-- Logo -->
         <a href="../index.html" class="navbar-brand">
-            <!-- Logo aquí -->
             <img src="img/LOGO_GH_SM-03.png" alt="Logo" id="logo" style="height: 60px; width: auto;">
         </a>
 
-        <div class="navbar-collapse collapse show" id="navbarNav">
-            <ul class="navbar-nav mx-auto navbar-list mb-2 mb-lg-0 align-items-center">
-                <!-- Links con mayor espacio y tamaño -->
+        <!-- Botón de menú hamburguesa para móviles -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menú desplegable -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto d-none d-lg-flex">
                 <li class="nav-item">
-                    <a href="#presale" class="nav-link fs-5 me-4">Presale</a>
+                    <a href="#presale" class="nav-link fs-5">Presale</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#launch" class="nav-link fs-5 me-4">Launch</a>
+                    <a href="#launch" class="nav-link fs-5">Launch</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#blog" class="nav-link fs-5 me-4">Blog</a>
+                    <a href="#blog" class="nav-link fs-5">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#miscellaneous" class="nav-link fs-5 me-4">Miscellaneous</a>
+                    <a href="#miscellaneous" class="nav-link fs-5">Miscellaneous</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#advertising" class="nav-link fs-5 me-4">Advertising</a>
+                    <a href="#advertising" class="nav-link fs-5">Advertising</a>
                 </li>
             </ul>
-        </div>
 
-        <!-- Íconos fuera de la barra vertical, alineados a la derecha -->
-        <div class="d-flex align-items-center">
-            <!-- Ícono de búsqueda -->
-            <a href="#" class="nav-link" id="search-drop" data-bs-toggle="dropdown" aria-expanded="false">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor"></rect>
-                    <path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor"></path>
-                </svg>
-            </a>
-            <ul class="p-0 sub-drop dropdown-menu dropdown-menu-end" aria-labelledby="search-drop">
-                <li class="">
-                    <div class="p-3 card-header justify-content-between border-bottom rounded-top">
-                        <div class="header-title">
-                            <div class="iq-search-bar device-search position-relative">
-                                <form action="#" class="searchbox">
-                                    <input type="text" class="text search-input form-control" placeholder="Search here...">
-                                    <a class="d-lg-none d-flex" href="javascript:void(0);">
-                                        <span class="material-symbols-outlined">search</span>
-                                    </a>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>  
+            <!-- Campo de búsqueda sin responsive -->
+            <form class="d-none d-lg-flex align-items-center">
+                <input type="text" class="form-control me-2" placeholder="Buscar..." aria-label="Buscar">
+                <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+            </form>
 
-            <!-- Ícono de notificaciones -->
-            <a href="#" class="nav-link" id="notification-drop" data-bs-toggle="dropdown">
-                <svg width="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 17.8476C17.6392 17.8476 20.2481 17.1242 20.5 14.2205C20.5 11.3188 18.6812 11.5054 18.6812 7.94511C18.6812 5.16414 16.0452 2 12 2C7.95477 2 5.31885 5.16414 5.31885 7.94511C5.31885 11.5054 3.5 11.3188 3.5 14.2205C3.75295 17.1352 6.36177 17.8476 12 17.8476Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M14.3889 20.8572C13.0247 22.3719 10.8967 22.3899 9.51953 20.8572" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-                <span class="bg-danger dots"></span>
-            </a>
-            <div class="sub-drop dropdown-menu iq-noti dropdown-menu-end p-0" aria-labelledby="notification-drop">
-                <div class="card shadow-none m-0 bg-transparent">
-                    <div class="card-header d-flex justify-content-between">
-                        <div class="header-title">
-                            <p class="fs-6">New notifications.</p>
-                        </div>
-                        <div class="header-title">
-                            <p class="fs-6">Mark all</p>
-                        </div>
+            <!-- Menú vertical en dispositivos pequeños -->
+            <div class="d-lg-none">
+                <div class="list-group">
+                    <!-- Campo de búsqueda -->
+                    <div class="list-group-item">
+                        <input type="text" class="form-control" placeholder="Buscar...">
                     </div>
-                    <div class="card-body p-0">
-                        <a href="#" class="iq-sub-card">
-                            <div class="d-flex">
-                                <img src="assets/images/utilities/05.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img51">
-                                <div class="ms-3 w-100">
-                                    <h6 class="mb-0">Successful transaction of 0.01 BTC</h6>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <p class="mb-0">15 mins ago</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="iq-sub-card">
-                            <div class="d-flex align-items-center">
-                                <img src="assets/images/utilities/03.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img52">
-                                <div class="ms-3 w-100">
-                                    <h6 class="mb-0">4 Pending Transactions!</h6>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <p class="mb-0">30 mins ago</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Ícono de correos -->
-            <a href="#" class="nav-link" id="mail-drop" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <svg width="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.9028 8.85107L13.4596 12.4641C12.6201 13.1301 11.4389 13.1301 10.5994 12.4641L6.11865 8.85107" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9089 21C19.9502 21.0084 22 18.5095 22 15.4384V8.57001C22 5.49883 19.9502 3 16.9089 3H7.09114C4.04979 3 2 5.49883 2 8.57001V15.4384C2 18.5095 4.04979 21.0084 7.09114 21H16.9089Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-                <span class="bg-primary count-mail"></span>
-            </a>
-            <div class="sub-drop dropdown-menu dropdown-menu-end p-0" aria-labelledby="mail-drop">
-                <div class="card shadow-none m-0 bg-transparent">
-                    <div class="card-header d-flex justify-content-between py-3">
-                        <div class="header-title">
-                            <p class="mb-0 text-white">Our Latest News</p>
-                        </div>
-                    </div>
-                    <div class="card-body p-0">
-                        <a href="#" class="iq-sub-card">
-                            <div class="d-flex">
-                                <img src="assets/images/utilities/02.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img51">
-                                <div class="ms-3 w-100">
-                                    <h6 class="mb-0">Bitcoin Trading <span class="badge bg-success">New</span></h6>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                    <!-- Items de navegación -->
+                    <a href="#presale" class="list-group-item list-group-item-action">Presale</a>
+                    <a href="#launch" class="list-group-item list-group-item-action">Launch</a>
+                    <a href="#blog" class="list-group-item list-group-item-action">Blog</a>
+                    <a href="#miscellaneous" class="list-group-item list-group-item-action">Miscellaneous</a>
+                    <a href="#advertising" class="list-group-item list-group-item-action">Advertising</a>
                 </div>
             </div>
         </div>
     </div>
 </nav>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<!--Nav End-->
-
-<!--Nav End-->
-
-<!--Nav End-->
-
-
-        
-      <div class="container-fluid content-inner pb-0">
-        <style>
-            /* Sobrescribir el min-height */
-            .main-content .content-inner {
-                min-height: auto !important;
-            }
-    
-            /* Estilo para las imágenes */
-            .banner-img {
-                object-fit: cover;
-                width: 100%;
-            }
-    
-            /* Ajuste responsivo para el tamaño de las imágenes */
-            .banner-main {
-                max-height: 450px; /* Tamaño principal para pantallas grandes */
-            }
-    
-            .banner-secondary {
-                max-height: 300px;
-            }
-    
-            /* Margen reducido entre las tarjetas */
-            .card {
-                margin-bottom: 10px !important;
-            }
-    
-            @media (max-width: 768px) {
-                /* Asegurar que todas las imágenes sean proporcionales en pantallas pequeñas */
-                .banner-main, .banner-secondary {
-                    max-height: 300px;
-                }
-            }
-        </style>
-    
-        <!-- Banner principal (1x1 en pantallas pequeñas, 1x2 en pantallas grandes) -->
-        <div class="row">
-            <div class="col-md-12 col-12">
-                <div class="card p-2">
-                    <div class="card-body p-0">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <img src="img/BANNERXL_01.png" 
-                                     class="img-fluid banner-img banner-main" 
-                                     alt="Bitcoin Image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Banners secundarios (2x1 y 2x2) -->
-        <div class="row">
-            <!-- Imagen secundaria izquierda (2x1) -->
-            <div class="col-md-6 col-12">
-                <div class="card p-2">
-                    <div class="card-body p-0">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <img src="img/MANNERSM_02.png" 
-                                     class="img-fluid banner-img banner-secondary" 
-                                     alt="Bitcoin Image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Imagen secundaria derecha (2x2) -->
-            <div class="col-md-6 col-12">
-                <div class="card p-2">
-                    <div class="card-body p-0">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <img src="img/MANNERSM_02.png" 
-                                     class="img-fluid banner-img banner-secondary" 
-                                     alt="Bitcoin Image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- Contenido principal -->
+<div class="container-fluid">
+    <div class="row">
+        <!-- Banner principal -->
+        <div class="col-12">
+            <div class="card p-2 mb-3">
+                <img src="img/BANNERXL_01.png" class="img-fluid banner-img banner-main" alt="Banner Principal">
             </div>
         </div>
     </div>
+
+    <!-- Banners secundarios -->
+    <div class="row d-none d-lg-flex">
+        <!-- Horizontal sin responsive -->
+        <div class="col-md-4">
+            <div class="card p-2 mb-3">
+                <img src="img/MANNERSM_02.png" class="img-fluid banner-img" alt="Banner Secundario 1">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-2 mb-3">
+                <img src="img/MANNERSM_02.png" class="img-fluid banner-img" alt="Banner Secundario 2">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-2 mb-3">
+                <img src="img/MANNERSM_02.png" class="img-fluid banner-img" alt="Banner Secundario 3">
+            </div>
+        </div>
+    </div>
+
+    <!-- Vertical en responsive -->
+    <div class="row d-lg-none">
+        <div class="col-12 mb-3">
+            <div class="card p-2">
+                <img src="img/MANNERSM_02.png" class="img-fluid banner-img" alt="Banner Secundario 1">
+            </div>
+        </div>
+        <div class="col-12 mb-3">
+            <div class="card p-2">
+                <img src="img/MANNERSM_02.png" class="img-fluid banner-img" alt="Banner Secundario 2">
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="card p-2">
+                <img src="img/MANNERSM_02.png" class="img-fluid banner-img" alt="Banner Secundario 3">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Estilos adicionales -->
+<style>
+    .navbar {
+        margin-bottom: 1rem;
+    }
+
+    .navbar-nav {
+        white-space: nowrap;
+    }
+
+    .navbar-nav .nav-item {
+        flex-shrink: 0;
+    }
+
+    .banner-img {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .banner-main {
+        max-height: 600px; /* Ajuste manual del tamaño fuera del responsive */
+    }
+
+    .card {
+        margin-bottom: 5px !important; /* Ajuste del espaciado entre los banners secundarios */
+    }
+
+    @media (max-width: 768px) {
+        .banner-main {
+            max-height: 1500px; /* Ajuste manual del tamaño del banner principal en responsive */
+        }
+
+        .card {
+            margin-bottom: 15px !important; /* Ajuste del espaciado entre los banners secundarios en responsive */
+        }
+    }
+</style>
+
+
+<!--Nav End-->
+
+<!--Nav End-->
+
     
     
         <!-- Topbar Chart -->
@@ -598,255 +527,6 @@
                                      <span class="progress-bar bg-primary" data-toggle="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></span>
                                  </span>
                              </td>
-                             <td>
-                                 <div class="d-flex align-items-center justify-content-between gap-3">
-                                     <div id="table-chart-3" class="table-chart" data-color="#1AA053"></div>
-                                     <div class="dropdown">
-                                         <svg width="20" viewBox="0 0 24 24" id="dropdownMenuLink3" data-bs-toggle="dropdown" class="list-rotate" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.75C17.108 2.75 21.25 6.891 21.25 12C21.25 17.108 17.108 21.25 12 21.25C6.891 21.25 2.75 17.108 2.75 12C2.75 6.892 6.892 2.75 12 2.75Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                             <path d="M15.9393 12.0129H15.9483" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                             <path d="M11.9301 12.0129H11.9391" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                             <path d="M7.92128 12.0129H7.93028" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                         </svg>
-                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink3">
-                                             <li><a class="dropdown-item" href="#">Action</a></li>
-                                             <li><a class="dropdown-item" href="#">Another action</a></li>
-                                             <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                         </ul>
-                                     </div>
-                                 </div>
-                             </td>
-                         </tr>
-                         <tr>
-                             <td>
-                                 <div class="d-flex align-items-center">
-                                     <svg width="35" viewBox="0 0 35 25" class="stars" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                         <path d="M12 4.11804L13.7696 9.56434L13.8819 9.90983H14.2451H19.9717L15.3388 13.2758L15.0449 13.4894L15.1572 13.8348L16.9268 19.2812L12.2939 15.9152L12 15.7016L11.7061 15.9152L7.0732 19.2812L8.84282 13.8348L8.95507 13.4894L8.66118 13.2758L4.02828 9.90983H9.75486H10.1181L10.2304 9.56434L12 4.11804Z" stroke="currentColor"/>
-                                     </svg>
-                                     <span class="ms-3 me-3">1</span>
-                                     <div class="d-flex align-items-center ms-2">Bitcoin<p class="ms-2 mb-0 text-body-secondary">BTC</p><button type="button" class="btn btn-sm btn-primary ms-2">Buy</button></div>
-                                 </div>
-                             </td>
-                             <td>$44,460.80</td>
-                             <td>2.03%</td>
-                             <td>1.56%</td>
-                             <td>$833,674,377,631</td>
-                             <td>
-                                 <div class="d-flex flex-column">
-                                     <span>$31,005,385,672</span>
-                                     <small class="text-body-secondary">698,842 BTC</small>
-                                 </div></td>
-                             <td>
-                                 <div class="d-flex align-items-center mb-1">
-                                     <h6 class="heading-title">18,790,493 BTC</h6>
-                                 </div>
-                                 <span class="progress shadow-none w-100" style="height: 8px;">
-                                     <span class="progress-bar bg-primary" data-toggle="progress-bar" role="progressbar" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></span>
-                                 </span>
-                             </td>
-                             <td>
-                                 <div class="d-flex align-items-center justify-content-between gap-3">
-                                    <div id="table-chart-4" class="table-chart" data-color="#FF2E2E"></div>
-                                     <div class="dropdown">
-                                         <svg width="20" viewBox="0 0 24 24" id="dropdownMenuLink4" data-bs-toggle="dropdown" class="list-rotate" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.75C17.108 2.75 21.25 6.891 21.25 12C21.25 17.108 17.108 21.25 12 21.25C6.891 21.25 2.75 17.108 2.75 12C2.75 6.892 6.892 2.75 12 2.75Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                             <path d="M15.9393 12.0129H15.9483" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                             <path d="M11.9301 12.0129H11.9391" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                             <path d="M7.92128 12.0129H7.93028" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                         </svg>
-                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink4">
-                                             <li><a class="dropdown-item" href="#">Action</a></li>
-                                             <li><a class="dropdown-item" href="#">Another action</a></li>
-                                             <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                         </ul>
-                                     </div>
-                                 </div>
-                             </td>
-                         </tr>
-                         <tr>
-                             <td>
-                                 <div class="d-flex align-items-center">
-                                     <svg width="35" viewBox="0 0 35 25" class="stars" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                         <path d="M12 4.11804L13.7696 9.56434L13.8819 9.90983H14.2451H19.9717L15.3388 13.2758L15.0449 13.4894L15.1572 13.8348L16.9268 19.2812L12.2939 15.9152L12 15.7016L11.7061 15.9152L7.0732 19.2812L8.84282 13.8348L8.95507 13.4894L8.66118 13.2758L4.02828 9.90983H9.75486H10.1181L10.2304 9.56434L12 4.11804Z" stroke="currentColor"/>
-                                     </svg>
-                                     <span class="ms-3 me-3">1</span>
-                                     <div class="d-flex align-items-center ms-2">Bitcoin<p class="ms-2 mb-0 text-body-secondary">BTC</p><button type="button" class="btn btn-sm btn-primary ms-2">Buy</button></div>
-                                 </div>
-                             </td>
-                             <td>$44,460.80</td>
-                             <td>2.03%</td>
-                             <td>1.56%</td>
-                             <td>$833,674,377,631</td>
-                             <td>
-                                 <div class="d-flex flex-column">
-                                     <span>$31,005,385,672</span>
-                                     <small class="text-body-secondary">698,842 BTC</small>
-                                 </div></td>
-                             <td>
-                                 <div class="d-flex align-items-center mb-1">
-                                     <h6 class="heading-title">18,790,493 BTC</h6>
-                                 </div>
-                                 <span class="progress shadow-none w-100" style="height: 8px;">
-                                     <span class="progress-bar bg-primary" data-toggle="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></span>
-                                 </span>
-                             </td>
-                             <td>
-                                 <div class="d-flex align-items-center justify-content-between gap-3">
-                                     <div id="table-chart-5" class="table-chart" data-color="#1AA053"></div>
-                                     <div class="dropdown">
-                                         <svg width="20" viewBox="0 0 24 24" id="dropdownMenuLink5" data-bs-toggle="dropdown" class="list-rotate" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.75C17.108 2.75 21.25 6.891 21.25 12C21.25 17.108 17.108 21.25 12 21.25C6.891 21.25 2.75 17.108 2.75 12C2.75 6.892 6.892 2.75 12 2.75Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                             <path d="M15.9393 12.0129H15.9483" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                             <path d="M11.9301 12.0129H11.9391" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                             <path d="M7.92128 12.0129H7.93028" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                         </svg>
-                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink5">
-                                             <li><a class="dropdown-item" href="#">Action</a></li>
-                                             <li><a class="dropdown-item" href="#">Another action</a></li>
-                                             <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                         </ul>
-                                     </div>
-                                 </div>
-                             </td>
-                         </tr>
-                         <tr>
-                             <td>
-                                 <div class="d-flex align-items-center">
-                                     <svg width="35" viewBox="0 0 35 25" class="stars" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                         <path d="M12 4.11804L13.7696 9.56434L13.8819 9.90983H14.2451H19.9717L15.3388 13.2758L15.0449 13.4894L15.1572 13.8348L16.9268 19.2812L12.2939 15.9152L12 15.7016L11.7061 15.9152L7.0732 19.2812L8.84282 13.8348L8.95507 13.4894L8.66118 13.2758L4.02828 9.90983H9.75486H10.1181L10.2304 9.56434L12 4.11804Z" stroke="currentColor"/>
-                                     </svg>
-                                     <span class="ms-3 me-3">1</span>
-                                     <div class="d-flex align-items-center ms-2">Bitcoin<p class="ms-2 mb-0 text-body-secondary">BTC</p><button type="button" class="btn btn-sm btn-primary ms-2">Buy</button></div>
-                                 </div>
-                             </td>
-                             <td>$44,460.80</td>
-                             <td>2.03%</td>
-                             <td>1.56%</td>
-                             <td>$833,674,377,631</td>
-                             <td>
-                                 <div class="d-flex flex-column">
-                                     <span>$31,005,385,672</span>
-                                     <small class="text-body-secondary">698,842 BTC</small>
-                                 </div></td>
-                             <td>
-                                 <div class="d-flex align-items-center mb-1">
-                                     <h6 class="heading-title">18,790,493 BTC</h6>
-                                 </div>
-                                 <span class="progress shadow-none w-100" style="height: 8px;">
-                                     <span class="progress-bar bg-primary" data-toggle="progress-bar" role="progressbar" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100"></span>
-                                 </span>
-                             </td>
-                             <td>
-                                 <div class="d-flex align-items-center justify-content-between gap-3">
-                                     <div id="table-chart-6" class="table-chart" data-color="#FF2E2E"></div>
-                                     <div class="dropdown">
-                                         <svg width="20" viewBox="0 0 24 24" id="dropdownMenuLink6" data-bs-toggle="dropdown" class="list-rotate" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.75C17.108 2.75 21.25 6.891 21.25 12C21.25 17.108 17.108 21.25 12 21.25C6.891 21.25 2.75 17.108 2.75 12C2.75 6.892 6.892 2.75 12 2.75Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                             <path d="M15.9393 12.0129H15.9483" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                             <path d="M11.9301 12.0129H11.9391" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                             <path d="M7.92128 12.0129H7.93028" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                         </svg>
-                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink6">
-                                             <li><a class="dropdown-item" href="#">Action</a></li>
-                                             <li><a class="dropdown-item" href="#">Another action</a></li>
-                                             <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                         </ul>
-                                     </div>
-                                 </div>
-                             </td>
-                         </tr>
-                         <tr>
-                             <td>
-                                 <div class="d-flex align-items-center">
-                                     <svg width="35" viewBox="0 0 35 25" class="stars" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                         <path d="M12 4.11804L13.7696 9.56434L13.8819 9.90983H14.2451H19.9717L15.3388 13.2758L15.0449 13.4894L15.1572 13.8348L16.9268 19.2812L12.2939 15.9152L12 15.7016L11.7061 15.9152L7.0732 19.2812L8.84282 13.8348L8.95507 13.4894L8.66118 13.2758L4.02828 9.90983H9.75486H10.1181L10.2304 9.56434L12 4.11804Z" stroke="currentColor"/>
-                                     </svg>
-                                     <span class="ms-3 me-3">1</span>
-                                     <div class="d-flex align-items-center ms-2">Bitcoin<p class="ms-2 mb-0 text-body-secondary">BTC</p><button type="button" class="btn btn-sm btn-primary ms-2">Buy</button></div>
-                                 </div>
-                             </td>
-                             <td>$44,460.80</td>
-                             <td>2.03%</td>
-                             <td>1.56%</td>
-                             <td>$833,674,377,631</td>
-                             <td>
-                                 <div class="d-flex flex-column">
-                                     <span>$31,005,385,672</span>
-                                     <small class="text-body-secondary">698,842 BTC</small>
-                                 </div></td>
-                             <td>
-                                 <div class="d-flex align-items-center mb-1">
-                                     <h6 class="heading-title">18,790,493 BTC</h6>
-                                 </div>
-                                 <span class="progress shadow-none w-100" style="height: 8px;">
-                                     <span class="progress-bar bg-primary" data-toggle="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></span>
-                                 </span>
-                             </td>
-                             <td>
-                                 <div class="d-flex align-items-center justify-content-between gap-3">
-                                     <div id="table-chart-7" class="table-chart" data-color="#1AA053"></div>
-                                     <div class="dropdown">
-                                         <svg width="20" viewBox="0 0 24 24" id="dropdownMenuLink7" data-bs-toggle="dropdown" class="list-rotate" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.75C17.108 2.75 21.25 6.891 21.25 12C21.25 17.108 17.108 21.25 12 21.25C6.891 21.25 2.75 17.108 2.75 12C2.75 6.892 6.892 2.75 12 2.75Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                             <path d="M15.9393 12.0129H15.9483" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                             <path d="M11.9301 12.0129H11.9391" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                             <path d="M7.92128 12.0129H7.93028" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                         </svg>
-                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink7">
-                                             <li><a class="dropdown-item" href="#">Action</a></li>
-                                             <li><a class="dropdown-item" href="#">Another action</a></li>
-                                             <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                         </ul>
-                                     </div>
-                                 </div>
-                             </td>
-                         </tr>
-                         <tr>
-                             <td>
-                                 <div class="d-flex align-items-center">
-                                     <svg width="35" viewBox="0 0 35 25" class="stars" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                         <path d="M12 4.11804L13.7696 9.56434L13.8819 9.90983H14.2451H19.9717L15.3388 13.2758L15.0449 13.4894L15.1572 13.8348L16.9268 19.2812L12.2939 15.9152L12 15.7016L11.7061 15.9152L7.0732 19.2812L8.84282 13.8348L8.95507 13.4894L8.66118 13.2758L4.02828 9.90983H9.75486H10.1181L10.2304 9.56434L12 4.11804Z" stroke="currentColor"/>
-                                     </svg>
-                                     <span class="ms-3 me-3">1</span>
-                                     <div class="d-flex align-items-center ms-2">Bitcoin<p class="ms-2 mb-0 text-body-secondary">BTC</p><button type="button" class="btn btn-sm btn-primary ms-2">Buy</button></div>
-                                 </div>
-                             </td>
-                             <td>$44,460.80</td>
-                             <td>2.03%</td>
-                             <td>1.56%</td>
-                             <td>$833,674,377,631</td>
-                             <td>
-                                 <div class="d-flex flex-column">
-                                     <span>$31,005,385,672</span>
-                                     <small class="text-body-secondary">698,842 BTC</small>
-                                 </div></td>
-                             <td>
-                                 <div class="d-flex align-items-center mb-1">
-                                     <h6 class="heading-title">18,790,493 BTC</h6>
-                                 </div>
-                                 <span class="progress shadow-none w-100" style="height: 8px;">
-                                     <span class="progress-bar bg-primary" data-toggle="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></span>
-                                 </span>
-                             </td>
-                             <td>
-                                 <div class="d-flex align-items-center justify-content-between gap-3">
-                                     <div id="table-chart-8" class="table-chart" data-color="#FF2E2E"></div>
-                                     <div class="dropdown">
-                                         <svg width="20" viewBox="0 0 24 24" id="dropdownMenuLink8" data-bs-toggle="dropdown" class="list-rotate" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.75C17.108 2.75 21.25 6.891 21.25 12C21.25 17.108 17.108 21.25 12 21.25C6.891 21.25 2.75 17.108 2.75 12C2.75 6.892 6.892 2.75 12 2.75Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                             <path d="M15.9393 12.0129H15.9483" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                             <path d="M11.9301 12.0129H11.9391" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                             <path d="M7.92128 12.0129H7.93028" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                         </svg>
-                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink8">
-                                             <li><a class="dropdown-item" href="#">Action</a></li>
-                                             <li><a class="dropdown-item" href="#">Another action</a></li>
-                                             <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                         </ul>
-                                     </div>
-                                 </div>
-                             </td>
-                         </tr>
                          <tr>
                              <td>
                                  <div class="d-flex align-items-center">
@@ -902,25 +582,12 @@
      <div class="container mt-5">
         <div class="row">
             <!-- Column 1 -->
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <div class="card">
                     <div class="card-header border-bottom py-4 px-0 mx-4 ps-2">
                         <div class="header-title">
                             <div class="d-flex justify-content-between">
-                                <h4 class="card-title">List</h4>
-                                <div class="text-primary">
-                                    <div class="dropdown" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false" role="button">
-                                        View all
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                        </svg>
-                                    </div>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                                </div>
+                                <h4 class="card-title">New Coins</h4>
                             </div>
                         </div>
                     </div>
@@ -945,57 +612,13 @@
                 </div>
             </div>
     
-            <!-- Column 2 (replicate the same content) -->
-            <div class="col-lg-4">
+            <!-- Column 2 -->
+            <div class="col-lg-6">
                 <div class="card">
                     <div class="card-header border-bottom py-4 px-0 mx-4 ps-2">
                         <div class="header-title">
                             <div class="d-flex justify-content-between">
-                                <h4 class="card-title">List</h4>
-                                <div class="text-primary">
-                                    <div class="dropdown" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false" role="button">
-                                        View all
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                        </svg>
-                                    </div>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body team-card">
-                        <ul class="academy-list list-inline m-0 p-0">
-                            <!-- Replicate list items -->
-                        </ul>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Column 3 (replicate the same content) -->
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-header border-bottom py-4 px-0 mx-4 ps-2">
-                        <div class="header-title">
-                            <div class="d-flex justify-content-between">
-                                <h4 class="card-title">List</h4>
-                                <div class="text-primary">
-                                    <div class="dropdown" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false" role="button">
-                                        View all
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                        </svg>
-                                    </div>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                                </div>
+                                <h4 class="card-title">Presale Live</h4>
                             </div>
                         </div>
                     </div>
@@ -1008,6 +631,8 @@
             </div>
         </div>
     </div>
+    
+    
 
      <div class="container mt-5">
         <div class="row d-flex align-items-center">
