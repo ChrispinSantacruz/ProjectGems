@@ -98,8 +98,42 @@
 </nav>
 
 
+<style>
+    /* Estilo general para los banners */
+    .banner-img {
+        object-fit: cover; /* Asegurar que la imagen cubra el área sin distorsión */
+        width: 100%;       /* Ajustar al ancho del contenedor */
+        height: auto;      /* Mantener proporciones por defecto */
+    }
 
-<!-- index de banners -->
+    /* Ajustes específicos para el banner principal */
+    .banner-main {
+        height: 100px;     /* Fijar la altura a 100px */
+        width: 100%;       /* Ajustar al ancho completo de la tarjeta */
+        object-fit: contain; /* Ajustar para que la imagen se vea completa dentro del área visible */
+    }
+
+    /* Ajustes específicos para los banners secundarios */
+    .banner-secondary {
+        max-height: 250px; /* Aumentar ligeramente el tamaño de los banners secundarios */
+        margin-bottom: 2px; /* Reducir la separación entre los banners secundarios */
+        object-fit: contain; /* Ajustar para que la imagen se vea completa */
+        width: 100%;        /* Cubrir todo el ancho del contenedor */
+    }
+
+    /* Ajustes responsivos */
+    @media (max-width: 768px) {
+        .banner-main {
+            height: 80px; /* Reducir altura del banner principal en pantallas pequeñas */
+        }
+
+        .banner-secondary {
+            max-height: 200px; /* Reducir tamaño de los banners secundarios en pantallas pequeñas */
+        }
+    }
+</style>
+
+<!-- Contenedor para el banner principal -->
 <div class="container-fluid">
     <div class="row">
         <!-- Banner principal -->
@@ -109,86 +143,50 @@
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Banners secundarios -->
+<!-- Banners secundarios -->
+<div class="container-fluid">
     <div class="row d-none d-lg-flex">
         <!-- Horizontal sin responsive -->
         <div class="col-md-4">
-            <div class="card p-2 mb-3">
-                <img src="img/MANNERSM_02.png" class="img-fluid banner-img" alt="Banner Secundario 1">
+            <div class="card p-2">
+                <img src="img/bannersm_02.jpg" class="img-fluid banner-img banner-secondary" alt="Banner Secundario 1">
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card p-2 mb-3">
-                <img src="img/MANNERSM_02.png" class="img-fluid banner-img" alt="Banner Secundario 2">
+            <div class="card p-2">
+                <img src="img/bannersm_13.jpg" class="img-fluid banner-img banner-secondary" alt="Banner Secundario 2">
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card p-2 mb-3">
-                <img src="img/MANNERSM_02.png" class="img-fluid banner-img" alt="Banner Secundario 3">
+            <div class="card p-2">
+                <img src="img/bannersm_14.jpg" class="img-fluid banner-img banner-secondary" alt="Banner Secundario 3">
             </div>
         </div>
     </div>
 
     <!-- Vertical en responsive -->
     <div class="row d-lg-none">
-        <div class="col-12 mb-3">
+        <div class="col-12 mb-2">
             <div class="card p-2">
-                <img src="img/MANNERSM_02.png" class="img-fluid banner-img" alt="Banner Secundario 1">
+                <img src="img/bannersm_02.jpg" class="img-fluid banner-img banner-secondary" alt="Banner Secundario 1">
             </div>
         </div>
-        <div class="col-12 mb-3">
+        <div class="col-12 mb-2">
             <div class="card p-2">
-                <img src="img/MANNERSM_02.png" class="img-fluid banner-img" alt="Banner Secundario 2">
+                <img src="img/bannersm_13.jpg" class="img-fluid banner-img banner-secondary" alt="Banner Secundario 2">
             </div>
         </div>
         <div class="col-12">
             <div class="card p-2">
-                <img src="img/MANNERSM_02.png" class="img-fluid banner-img" alt="Banner Secundario 3">
+                <img src="img/bannersm_14.jpg" class="img-fluid banner-img banner-secondary" alt="Banner Secundario 3">
             </div>
         </div>
     </div>
 </div>
 
-<!-- Estilos adicionales -->
-<style>
-    .navbar {
-        margin-bottom: 1rem;
-    }
 
-    .navbar-nav {
-        white-space: nowrap;
-    }
-
-    .navbar-nav .nav-item {
-        flex-shrink: 0;
-    }
-
-    .banner-img {
-        object-fit: cover;
-        width: 100%;
-    }
-
-    .banner-main {
-        max-height: 600px; /* Ajuste manual del tamaño fuera del responsive */
-    }
-
-    .card {
-        margin-bottom: 5px !important; /* Ajuste del espaciado entre los banners secundarios */
-    }
-
-    @media (max-width: 768px) {
-        .banner-main {
-            max-height: 400px; /* Ajuste manual del tamaño del banner principal en responsive */
-        }
-
-        .card {
-            margin-bottom: 15px !important; /* Ajuste del espaciado entre los banners secundarios en responsive */
-        }
-    }
-</style>
-
-    
     
         <!-- index de monedas, no necesita conectar base de datos -->
         <div class="topbar-chart iq-chart">
