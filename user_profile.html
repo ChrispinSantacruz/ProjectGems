@@ -1,0 +1,904 @@
+
+
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Perfil Gems</title>
+      <!-- Favicon -->
+      <link rel="shortcut icon" href="assets/images/favicon.ico" />
+      <link rel="stylesheet" href="assets/css/core/libs.min.css">
+      <link rel="stylesheet" href="assets/css/coinex.min.css?v=4.1.0">
+      <link rel="stylesheet" href="assets/css/custom.min.css?v=4.1.0">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">  </head>
+  <body class=" ">
+    <!-- loader Start -->
+    <div id="loading">
+      <div class="loader simple-loader">
+          <div class="loader-body"></div>
+      </div>    </div>
+    <!-- loader END -->
+         <main class="main-content">
+      <div class="position-relative">
+
+         <div id="floating-ad">
+            <a href="https://tu-enlace.com" target="_blank">
+              <img src="img/logo5.jpg" alt="Publicidad">
+            </a>
+            <button id="close-floating-ad">×</button>
+          </div>
+          
+          <div id="horizontal-ad">
+            <a href="https://tu-enlace.com" target="_blank">
+              <img src="img/bannersm_02.jpg" alt="Publicidad Horizontal">
+            </a>
+            <button id="close-horizontal-ad">×</button>
+          </div>
+          
+          <style>
+            /* Cuadro flotante vertical */
+            #floating-ad {
+              position: fixed;
+              bottom: 120px; /* Espacio ajustado para el banner horizontal */
+              right: 20px;
+              width: 200px;
+              height: 200px;
+              background-color: #ffffff;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+              border-radius: 10px;
+              overflow: hidden;
+              z-index: 1000;
+            }
+          
+            #floating-ad img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          
+            #floating-ad #close-floating-ad {
+              position: absolute;
+              top: 5px;
+              right: 5px;
+              background-color: #f44336;
+              border: none;
+              color: #ffffff;
+              font-size: 16px;
+              font-weight: bold;
+              border-radius: 50%;
+              width: 25px;
+              height: 25px;
+              cursor: pointer;
+            }
+          
+            #floating-ad #close-floating-ad:hover {
+              background-color: #d32f2f;
+            }
+          
+            /* Banner horizontal */
+            #horizontal-ad {
+              position: fixed;
+              bottom: 0;
+              left: 0;
+              width: 100%; /* Ocupa todo el ancho */
+              height: 100px; /* Menos alto en responsive */
+              background-color: #ffffff;
+              box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+              overflow: hidden;
+              z-index: 999;
+            }
+          
+            #horizontal-ad img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          
+            #horizontal-ad #close-horizontal-ad {
+              position: absolute;
+              top: 5px;
+              right: 5px;
+              background-color: #f44336;
+              border: none;
+              color: #ffffff;
+              font-size: 16px;
+              font-weight: bold;
+              border-radius: 50%;
+              width: 25px;
+              height: 25px;
+              cursor: pointer;
+              z-index: 1001;
+            }
+          
+            #horizontal-ad #close-horizontal-ad:hover {
+              background-color: #d32f2f;
+            }
+          
+            /* Ajustes para pantallas pequeñas */
+            @media (max-width: 768px) {
+              #floating-ad {
+                width: 150px;
+                height: 150px;
+                bottom: 90px; /* Espacio reducido */
+              }
+          
+              #horizontal-ad {
+                height: 80px;
+              }
+            }
+          </style>
+          
+          <script>
+            // Cierra el cuadro flotante
+            document.getElementById('close-floating-ad').addEventListener('click', function () {
+              document.getElementById('floating-ad').style.display = 'none';
+            });
+          
+            // Cierra el banner horizontal
+            document.getElementById('close-horizontal-ad').addEventListener('click', function () {
+              document.getElementById('horizontal-ad').style.display = 'none';
+            });
+          </script>
+          
+          
+          
+        <!--Nav Start-->
+        <nav class="navbar navbar-expand-lg navbar-light iq-navbar border-bottom pb-lg-3 pt-lg-3">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <!-- Logo -->
+                <a href="../index.html" class="navbar-brand">
+                    <img src="img/LOGO_GH_SM-03.png" alt="Logo" id="logo" style="height: 60px; width: auto;">
+                </a>
+        
+                <!-- Botón de menú hamburguesa para móviles -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <!-- Menú desplegable -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto d-none d-lg-flex">
+                        <li class="nav-item">
+                            <a href="#presale" class="nav-link fs-5">Presale</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#launch" class="nav-link fs-5">Launch</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#blog" class="nav-link fs-5">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#miscellaneous" class="nav-link fs-5">Miscellaneous</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#advertising" class="nav-link fs-5">Advertising</a>
+                        </li>
+                    </ul>
+        
+                    <!-- Campo de búsqueda sin responsive -->
+                    <form class="d-none d-lg-flex align-items-center">
+                        <input type="text" class="form-control me-2" placeholder="Buscar..." aria-label="Buscar">
+                        <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+                    </form>
+        
+                    <!-- Menú vertical en dispositivos pequeños -->
+                    <div class="d-lg-none">
+                        <div class="list-group">
+                            <!-- Campo de búsqueda -->
+                            <div class="list-group-item">
+                                <input type="text" class="form-control" placeholder="Buscar...">
+                            </div>
+        
+                            <!-- Items de navegación -->
+                            <a href="#presale" class="list-group-item list-group-item-action">Presale</a>
+                            <a href="#launch" class="list-group-item list-group-item-action">Launch</a>
+                            <a href="#blog" class="list-group-item list-group-item-action">Blog</a>
+                            <a href="#miscellaneous" class="list-group-item list-group-item-action">Miscellaneous</a>
+                            <a href="#advertising" class="list-group-item list-group-item-action">Advertising</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>        <!--Nav End-->
+      </div>
+
+
+      <style>
+         /* Estilo general para los banners */
+         .banner-img {
+             object-fit: cover; /* Asegurar que la imagen cubra el área sin distorsión */
+             width: 100%;       /* Ajustar al ancho del contenedor */
+             height: auto;      /* Mantener proporciones por defecto */
+         }
+     
+         /* Ajustes específicos para el banner principal */
+         .banner-main {
+             height: 100px;     /* Fijar la altura a 100px */
+             width: 100%;       /* Ajustar al ancho completo de la tarjeta */
+             object-fit: contain; /* Ajustar para que la imagen se vea completa dentro del área visible */
+         }
+     
+         /* Ajustes específicos para los banners secundarios */
+         .banner-secondary {
+             max-height: 250px; /* Aumentar ligeramente el tamaño de los banners secundarios */
+             margin-bottom: 2px; /* Reducir la separación entre los banners secundarios */
+             object-fit: contain; /* Ajustar para que la imagen se vea completa */
+             width: 100%;        /* Cubrir todo el ancho del contenedor */
+         }
+     
+         /* Ajustes responsivos */
+         @media (max-width: 768px) {
+             .banner-main {
+                 height: 80px; /* Reducir altura del banner principal en pantallas pequeñas */
+             }
+     
+             .banner-secondary {
+                 max-height: 200px; /* Reducir tamaño de los banners secundarios en pantallas pequeñas */
+             }
+         }
+     </style>
+     
+     <!-- Contenedor para el banner principal -->
+     <div class="container-fluid">
+         <div class="row">
+             <!-- Banner principal -->
+             <div class="col-12">
+                 <div class="card p-2 mb-3">
+                     <img src="img/BANNERXL_01.png" class="img-fluid banner-img banner-main" alt="Banner Principal">
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+     <!-- Banners secundarios -->
+     <div class="container-fluid">
+         <div class="row d-none d-lg-flex">
+             <!-- Horizontal sin responsive -->
+             <div class="col-md-4">
+                 <div class="card p-2">
+                     <img src="img/bannersm_02.jpg" class="img-fluid banner-img banner-secondary" alt="Banner Secundario 1">
+                 </div>
+             </div>
+             <div class="col-md-4">
+                 <div class="card p-2">
+                     <img src="img/bannersm_13.jpg" class="img-fluid banner-img banner-secondary" alt="Banner Secundario 2">
+                 </div>
+             </div>
+             <div class="col-md-4">
+                 <div class="card p-2">
+                     <img src="img/bannersm_14.jpg" class="img-fluid banner-img banner-secondary" alt="Banner Secundario 3">
+                 </div>
+             </div>
+         </div>
+     
+         <!-- Vertical en responsive -->
+         <div class="row d-lg-none">
+             <div class="col-12 mb-2">
+                 <div class="card p-2">
+                     <img src="img/bannersm_02.jpg" class="img-fluid banner-img banner-secondary" alt="Banner Secundario 1">
+                 </div>
+             </div>
+             <div class="col-12 mb-2">
+                 <div class="card p-2">
+                     <img src="img/bannersm_13.jpg" class="img-fluid banner-img banner-secondary" alt="Banner Secundario 2">
+                 </div>
+             </div>
+             <div class="col-12">
+                 <div class="card p-2">
+                     <img src="img/bannersm_14.jpg" class="img-fluid banner-img banner-secondary" alt="Banner Secundario 3">
+                 </div>
+             </div>
+         </div>
+     </div>
+      <div class="container-fluid content-inner pb-0">
+      <div class="row">
+          <div class="col-lg-12">
+             <div class="card">
+               <div class="iq-header-img bg-secondary-subtle iq-user-profile-bg">
+                  <img src="assets/images/pages/02-page.png" alt="header" class="img-fluid w-100 h-100 object-fit-cover">
+               </div>
+                  <div class="card-body mt-n6">
+                     <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex flex-wrap align-items-center">
+                           <div class="profile-img position-relative me-3 mb-3 mb-lg-0">
+                              <img src="assets/images/avatars/01.png" class="img-fluid avatar avatar-100 avatar-rounded" alt="profile-image">
+                           </div>
+                           <div class="d-flex align-items-center mb-3 mb-sm-0">
+                              <div>
+                                 <h6 class="me-2 text-warning">Devon Lane</h6>
+                                 <p>UI/UX Designer</p>
+                              </div>
+                              <div class="ms-3">
+                                 <h6 class="me-2">Hello@gmail.com</h6>
+                                 <p>Email</p>
+                              </div> 
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+             </div>
+          </div>
+      </div>
+      <div class="container">
+         <div class="row">
+             <!-- Perfil y Publicaciones - Columna Izquierda -->
+             <div class="col-lg-8 col-md-12">
+                 <div class="profile-content tab-content">
+                     <div id="profile-feed" class="tab-pane fade active show">
+                         <div class="card h-100">
+                             <div class="card-header d-flex align-items-center justify-content-between pb-4">
+                                 <div class="header-title">
+                                     <div class="d-flex flex-wrap">
+                                         <div class="media-support-user-img me-3">
+                                             <img class="rounded-pill img-fluid avatar-60 bg-danger-subtle" src="assets/images/avatars/02.png" alt="">
+                                         </div>
+                                         <div class="media-support-info mt-2">
+                                             <h5 class="mb-0">Anna Sthesia</h5>
+                                             <p class="mb-0 text-primary">colleagues</p>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="card-body p-0">
+                                 <div class="user-post">
+                                     <a href="javascript:void(0);">
+                                         <img src="assets/images/pages/01-page.png" alt="post-image" class="img-fluid">
+                                     </a>
+                                 </div>
+                                 <div class="comment-area p-3">
+                                     <div class="d-flex flex-wrap justify-content-between align-items-center">
+                                         <div class="d-flex align-items-center">
+                                             <div class="d-flex align-items-center message-icon me-3"></div>
+                                             <div class="d-flex align-items-center feather-icon"></div>
+                                         </div>
+                                         <div class="share-block d-flex align-items-center feather-icon">
+                                             <a href="javascript:void(0);" data-bs-toggle="offcanvas" data-bs-target="#share-btn" aria-controls="share-btn">
+                                                 <span class="ms-1">
+                                                     <svg width="18" class="me-1" viewBox="0 0 24 24">
+                                                         <path fill="currentColor" d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z"></path>
+                                                     </svg>
+                                                     Share
+                                                 </span>
+                                             </a>
+                                         </div>
+                                     </div>
+                                     <hr>
+                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla dolor, ornare at commodo non, feugiat non nisi. Phasellus faucibus mollis pharetra. Proin blandit ac massa sed rhoncus</p>
+                                     <hr>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+     
+             <!-- Columna Derecha - About y Twitter -->
+             <div class="col-lg-4 col-md-12">
+                 <!-- About -->
+                 <div class="card mb-3">
+                     <div class="card-header">
+                         <div class="header-title">
+                             <h4 class="card-title">About</h4>
+                         </div>
+                     </div>
+                     <div class="card-body">
+                         <p>Lorem ipsum dolor sit amet, contur adipiscing elit.</p>
+                         <div class="mb-1">Email: <a href="#" class="ms-3">nikjone@demoo.com</a></div>
+                         <div class="mb-1">Phone: <a href="#" class="ms-3">001 2351 256 12</a></div>
+                         <div>Location: <span class="ms-3">USA</span></div>
+                     </div>
+                 </div>
+                 <!-- Twitter Feed -->
+                 <div class="twitter-feed" style="max-width: 100%; margin: 0 auto; border-radius: 10px; overflow: hidden; background: transparent;">
+                  <a class="twitter-timeline" 
+                     data-theme="dark" 
+                     href="https://twitter.com/gemshypers?ref_src=twsrc%5Etfw">
+                     Tweets by GemsHypers
+                  </a> 
+                  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              </div>
+              
+             </div>
+         </div>
+     </div>
+     <!-- Contenedor para el banner principal -->
+<div class="container-fluid">
+   <div class="row">
+       <!-- Banner principal -->
+       <div class="col-12">
+           <div class="card p-2 mb-3">
+               <img src="img/BANNERXL_01.png" class="img-fluid banner-img banner-main" alt="Banner Principal">
+           </div>
+       </div>
+   </div>
+</div>
+      
+<div class="contenedor" style="margin-top: 90px; margin-bottom: 40px;">
+   <!-- Sección de Tokenomics -->
+   <div id="tokenomica" class="mb-4" style="padding: 20px;">
+     <div class="tarjeta h-100" style="max-width: 900px; margin: auto;">
+       <div class="encabezado-tarjeta">
+         <div class="titulo-tokenomica d-flex justify-content-between align-items-center">
+           <h4 class="titulo-tarjeta texto-primario">Tokenomía</h4>
+         </div>
+       </div>
+       <div class="cuerpo-tarjeta d-flex flex-wrap">
+         <div class="grafica-tokenomica" id="grafica-tokenomica"></div>
+         <div class="datos-tokenomica">
+           <ul>
+             <li>Presale: 40%</li>
+             <li>Staking & Recompensas: 29%</li>
+             <li>Liquidez & Intercambio: 15%</li>
+             <li>Tesorería & Reserva: 6%</li>
+             <li>Equipo: 5%</li>
+             <li>Marketing & KOL: 5%</li>
+           </ul>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+ 
+ <style>
+   /* Diseño principal para pantallas grandes */
+   .grafica-tokenomica {
+     width: 60%;
+     height: 400px;
+   }
+ 
+   .datos-tokenomica {
+     width: 40%;
+     padding-left: 20px;
+   }
+ 
+   .datos-tokenomica ul {
+     padding: 0;
+     margin: 0;
+     list-style: none;
+   }
+ 
+   .datos-tokenomica ul li {
+     margin-bottom: 10px;
+     font-size: 16px;
+   }
+ 
+   /* Ocultar gráfica en pantallas pequeñas */
+   @media (max-width: 768px) {
+     .grafica-tokenomica {
+       display: none;
+     }
+
+     .datos-tokenomica {
+       width: 100%;
+       padding-left: 0;
+       margin-top: 20px;
+     }
+
+     .datos-tokenomica ul li {
+       font-size: 14px;
+     }
+   }
+ </style>
+ 
+ <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+ <script>
+   document.addEventListener('DOMContentLoaded', function () {
+     var opcionesGraficaTokenomica = {
+       chart: {
+         type: 'pie',
+         height: '100%',
+       },
+       series: [40, 29, 15, 6, 5, 5],
+       labels: [
+         'Presale',
+         'Staking & Recompensas',
+         'Liquidez & Intercambio',
+         'Tesorería & Reserva',
+         'Equipo',
+         'Marketing & KOL',
+       ],
+       colors: ['#FF4560', '#008FFB', '#00E396', '#FEB019', '#775DD0', '#FF66C3'],
+     };
+ 
+     var graficaTokenomica = new ApexCharts(
+       document.querySelector('#grafica-tokenomica'),
+       opcionesGraficaTokenomica
+     );
+     graficaTokenomica.render();
+   });
+ </script>
+
+   
+
+
+   <div class="contenedor" style="margin-top: 40px; margin-bottom: 40px;">
+      <div class="row g-4">
+        <!-- Sección de Iframe -->
+        <div class="col-lg-8">
+          <iframe 
+            width="100%" 
+            height="1000" 
+            frameBorder="0" 
+            scrolling="no" 
+            src="https://coinbrain.com/embed/eth-0xdac17f958d2ee523a2206206994597c13d831ec7?theme=dark&padding=16&chart=1&trades=1"
+            style="border: none; border-radius: 10px;">
+          </iframe>
+        </div>
+    
+        <!-- Contenedor Derecho -->
+        <div class="col-lg-4 d-flex flex-column gap-4">
+          <!-- Sección de Seguridad -->
+          <div id="seguridad" style="background-color: #1e1e1e; border-radius: 10px; padding: 20px; color: white;">
+            <div class="tarjeta h-100">
+              <div class="encabezado-tarjeta">
+                <h4 class="titulo-tarjeta">Seguridad</h4>
+              </div>
+              <div class="cuerpo-tarjeta">
+                <div class="flex flex-col gap-4 rounded-lg bg-panel-bg p-3">
+                  <div class="text-sm font-bold text-white">Safety</div>
+                  <div class="d-flex justify-content-between text-xs text-neutral-400">
+                    <div>Audit:</div>
+                    <span>Audit not provided</span>
+                  </div>
+                  <div class="d-flex justify-content-between text-xs text-neutral-400">
+                    <div>KYC:</div>
+                    <span>KYC not provided</span>
+                  </div>
+                  <div class="d-flex justify-content-between rounded-md bg-gray-500 bg-opacity-40 p-2">
+                    <a href="https://bscheck.eu/bsc/0x2d13f9d88bb021a01ace9e5424fb82a408e1e0f2" class="d-flex flex-column" target="_blank" rel="noreferrer nofollow noopener">
+                      <span class="text-xs text-stone-400">No Report - Click to generate</span>
+                      <p class="text-[10px] text-neutral-400">Powered by BSC check</p>
+                    </a>
+                    <img height="18" width="60" src="/partners/bsccheck.png" alt="bsccheck.eu">
+                  </div>
+                  <div class="d-flex justify-content-between rounded-md bg-gray-500 bg-opacity-40 p-2">
+                    <a href="https://tools.staysafu.org/scan?a=0x2d13f9d88bb021a01ace9e5424fb82a408e1e0f2" target="_blank" rel="noreferrer nofollow noopener">
+                      <span class="text-xs text-stone-400">No Result</span>
+                      <p class="text-[10px] text-neutral-400">Powered By StaySafu</p>
+                    </a>
+                    <img height="32" width="32" src="/v3/staysafu.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Sección de New Coins -->
+          <div class="card">
+            <div class="card-header border-bottom py-4 px-0 mx-4 ps-2">
+              <div class="d-flex justify-content-between">
+                <h4 class="card-title">New Coins</h4>
+              </div>
+            </div>
+            <div class="card-body">
+              <ul class="list-unstyled">
+                <li class="d-flex justify-content-between align-items-center rounded-pill mb-3">
+                  <img src="img/logo1.jpg" class="img-fluid avatar avatar-40 avatar-rounded" alt="logo1">
+                  <div class="ms-3 flex-grow-1 d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">CR Coin</h5>
+                    <p class="mb-0">7 mins ago</p>
+                  </div>
+                </li>
+                <li class="d-flex justify-content-between align-items-center rounded-pill mb-3">
+                  <img src="img/logo2.jpg" class="img-fluid avatar avatar-40 avatar-rounded" alt="logo2">
+                  <div class="ms-3 flex-grow-1 d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">AI Glitch Cat</h5>
+                    <p class="mb-0">1 hour ago</p>
+                  </div>
+                </li>
+                <li class="d-flex justify-content-between align-items-center rounded-pill mb-3">
+                  <img src="img/logo3.jpg" class="img-fluid avatar avatar-40 avatar-rounded" alt="logo3">
+                  <div class="ms-3 flex-grow-1 d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">The Crypto Club</h5>
+                    <p class="mb-0">2 hrs ago</p>
+                  </div>
+                </li>
+                <li class="d-flex justify-content-between align-items-center rounded-pill mb-3">
+                  <img src="img/logo4.jpg" class="img-fluid avatar avatar-40 avatar-rounded" alt="logo4">
+                  <div class="ms-3 flex-grow-1 d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">STAR PACIFIC COIN</h5>
+                    <p class="mb-0">2 hrs ago</p>
+                  </div>
+                </li>
+                <li class="d-flex justify-content-between align-items-center rounded-pill">
+                  <img src="img/logo5.jpg" class="img-fluid avatar avatar-40 avatar-rounded" alt="logo5">
+                  <div class="ms-3 flex-grow-1 d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Doxxed Ex Girlfriend</h5>
+                    <p class="mb-0">3 hrs ago</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+<!-- Contenedor para el banner principal -->
+<div class="container-fluid">
+   <div class="row">
+       <!-- Banner principal -->
+       <div class="col-12">
+           <div class="card p-2 mb-3">
+               <img src="img/BANNERXL_01.png" class="img-fluid banner-img banner-main" alt="Banner Principal">
+           </div>
+       </div>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-lg-12">
+        <div class="table-responsive">
+            <table class="table data-table list-table">
+                <thead>
+                    <tr class="">
+                        <th scope="col"><span class="ms-5 me-3"># </span> Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">24h %</th>
+                        <th scope="col">7d %</th>
+                        <th scope="col">Market Cap</th>
+                        <th scope="col">Volume(24h)</th>
+                        <th scope="col">Circulating Supply</th>
+                        <th scope="col">Last 7 Days</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <svg width="35" viewBox="0 0 35 25" class="stars" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 4.11804L13.7696 9.56434L13.8819 9.90983H14.2451H19.9717L15.3388 13.2758L15.0449 13.4894L15.1572 13.8348L16.9268 19.2812L12.2939 15.9152L12 15.7016L11.7061 15.9152L7.0732 19.2812L8.84282 13.8348L8.95507 13.4894L8.66118 13.2758L4.02828 9.90983H9.75486H10.1181L10.2304 9.56434L12 4.11804Z" stroke="currentColor"/>
+                                </svg>
+                                <span class="ms-3 me-3">1</span>
+                                <div class="d-flex align-items-center ms-2">Bitcoin<p class="ms-2 mb-0 text-body-secondary">BTC</p><button type="button" class="btn btn-sm btn-primary ms-2">Buy</button></div>
+                            </div>
+                        </td>
+                        <td>$44,460.80</td>
+                        <td class="text-danger">2.03%</td>
+                        <td class="text-danger">1.56%</td>
+                        <td>$833,674,377,631</td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span>$31,005,385,672</span>
+                                <small class="text-body-secondary">698,842 BTC</small>
+                            </div></td>
+                        <td>
+                            <div class="d-flex align-items-center mb-1">
+                                <h6 class="heading-title">18,790,493 BTC</h6>
+                            </div>
+                            <span class="progress shadow-none w-100" style="height: 8px;">
+                                <span class="progress-bar bg-primary" data-toggle="progress-bar" role="progressbar" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></span>
+                            </span>
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-center justify-content-between gap-3">
+                                <div id="table-chart-1" class="table-chart" data-color="#1AA053"></div>
+                                <div class="dropdown">
+                                    <svg width="20" viewBox="0 0 24 24" id="dropdownMenuLink1" data-bs-toggle="dropdown" class="list-rotate" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.75C17.108 2.75 21.25 6.891 21.25 12C21.25 17.108 17.108 21.25 12 21.25C6.891 21.25 2.75 17.108 2.75 12C2.75 6.892 6.892 2.75 12 2.75Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M15.9393 12.0129H15.9483" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M11.9301 12.0129H11.9391" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M7.92128 12.0129H7.93028" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <svg width="35" viewBox="0 0 35 25" class="stars" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 4.11804L13.7696 9.56434L13.8819 9.90983H14.2451H19.9717L15.3388 13.2758L15.0449 13.4894L15.1572 13.8348L16.9268 19.2812L12.2939 15.9152L12 15.7016L11.7061 15.9152L7.0732 19.2812L8.84282 13.8348L8.95507 13.4894L8.66118 13.2758L4.02828 9.90983H9.75486H10.1181L10.2304 9.56434L12 4.11804Z" stroke="currentColor"/>
+                                </svg>
+                                <span class="ms-3 me-3">1</span>
+                                <div class="d-flex align-items-center ms-2">Bitcoin<p class="ms-2 mb-0 text-body-secondary">BTC</p><button type="button" class="btn btn-sm btn-primary ms-2">Buy</button></div>
+                            </div>
+                        </td>
+                        <td>$44,460.80</td>
+                        <td>2.03%</td>
+                        <td>1.56%</td>
+                        <td>$833,674,377,631</td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span>$31,005,385,672</span>
+                                <small class="text-body-secondary">698,842 BTC</small>
+                            </div></td>
+                        <td>
+                            <div class="d-flex align-items-center mb-1">
+                                <h6 class="heading-title">18,790,493 BTC</h6>
+                            </div>
+                            <span class="progress shadow-none w-100" style="height: 8px;">
+                                <span class="progress-bar bg-primary" data-toggle="progress-bar" role="progressbar" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100"></span>
+                            </span>
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-center justify-content-between gap-3">
+                                <div id="table-chart-2" class="table-chart" data-color="#FF2E2E"></div>
+                                <div class="dropdown">
+                                    <svg width="20" viewBox="0 0 24 24" id="dropdownMenuLink2" data-bs-toggle="dropdown" class="list-rotate" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.75C17.108 2.75 21.25 6.891 21.25 12C21.25 17.108 17.108 21.25 12 21.25C6.891 21.25 2.75 17.108 2.75 12C2.75 6.892 6.892 2.75 12 2.75Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M15.9393 12.0129H15.9483" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M11.9301 12.0129H11.9391" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M7.92128 12.0129H7.93028" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <svg width="35" viewBox="0 0 35 25" class="stars" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 4.11804L13.7696 9.56434L13.8819 9.90983H14.2451H19.9717L15.3388 13.2758L15.0449 13.4894L15.1572 13.8348L16.9268 19.2812L12.2939 15.9152L12 15.7016L11.7061 15.9152L7.0732 19.2812L8.84282 13.8348L8.95507 13.4894L8.66118 13.2758L4.02828 9.90983H9.75486H10.1181L10.2304 9.56434L12 4.11804Z" stroke="currentColor"/>
+                                </svg>
+                                <span class="ms-3 me-3">1</span>
+                                <div class="d-flex align-items-center ms-2">Bitcoin<p class="ms-2 mb-0 text-body-secondary">BTC</p><button type="button" class="btn btn-sm btn-primary ms-2">Buy</button></div>
+                            </div>
+                        </td>
+                        <td>$44,460.80</td>
+                        <td>2.03%</td>
+                        <td>1.56%</td>
+                        <td>$833,674,377,631</td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span>$31,005,385,672</span>
+                                <small class="text-body-secondary">698,842 BTC</small>
+                            </div></td>
+                        <td>
+                            <div class="d-flex align-items-center mb-1">
+                                <h6 class="heading-title">18,790,493 BTC</h6>
+                            </div>
+                            <span class="progress shadow-none w-100" style="height: 8px;">
+                                <span class="progress-bar bg-primary" data-toggle="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></span>
+                            </span>
+                        </td>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <svg width="35" viewBox="0 0 35 25" class="stars" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 4.11804L13.7696 9.56434L13.8819 9.90983H14.2451H19.9717L15.3388 13.2758L15.0449 13.4894L15.1572 13.8348L16.9268 19.2812L12.2939 15.9152L12 15.7016L11.7061 15.9152L7.0732 19.2812L8.84282 13.8348L8.95507 13.4894L8.66118 13.2758L4.02828 9.90983H9.75486H10.1181L10.2304 9.56434L12 4.11804Z" stroke="currentColor"/>
+                                </svg>
+                                <span class="ms-3 me-3">1</span>
+                                <div class="d-flex align-items-center ms-2">Bitcoin<p class="ms-2 mb-0 text-body-secondary">BTC</p><button type="button" class="btn btn-sm btn-primary ms-2">Buy</button></div>
+                            </div>
+                        </td>
+                        <td>$44,460.80</td>
+                        <td>2.03%</td>
+                        <td>1.56%</td>
+                        <td>$833,674,377,631</td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span>$31,005,385,672</span>
+                                <small class="text-body-secondary">698,842 BTC</small>
+                            </div></td>
+                        <td>
+                            <div class="d-flex align-items-center mb-1">
+                                <h6 class="heading-title">18,790,493 BTC</h6>
+                            </div>
+                            <span class="progress shadow-none w-100" style="height: 8px;">
+                                <span class="progress-bar bg-primary" data-toggle="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></span>
+                            </span>
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-center justify-content-between gap-3">
+                                <div id="table-chart-9" class="table-chart" data-color="#1AA053"></div>
+                                <div class="dropdown">
+                                    <svg width="20" viewBox="0 0 24 24" id="dropdownMenuLink9" data-bs-toggle="dropdown" class="list-rotate" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.75C17.108 2.75 21.25 6.891 21.25 12C21.25 17.108 17.108 21.25 12 21.25C6.891 21.25 2.75 17.108 2.75 12C2.75 6.892 6.892 2.75 12 2.75Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M15.9393 12.0129H15.9483" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M11.9301 12.0129H11.9391" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M7.92128 12.0129H7.93028" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink9">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<footer class="footer bg-dark text-white py-4">
+   <div class="container">
+       <div class="row align-items-center">
+           <!-- Logo del sitio web -->
+           <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+               <a href="../index.html" class="navbar-brand">
+                   <img src="img/LOGO_GH_SM-03.png" alt="Logo" style="height: 60px; width: auto;">
+               </a>
+           </div>
+
+           <!-- Navegación y enlaces -->
+           <div class="col-md-4 text-center mb-3 mb-md-0">
+               <ul class="list-inline mb-0">
+                   <li class="list-inline-item">
+                       <a href="#presale" class="text-white">Presale</a>
+                   </li>
+                   <li class="list-inline-item">
+                       <a href="#launch" class="text-white">Launch</a>
+                   </li>
+                   <li class="list-inline-item">
+                       <a href="#blog" class="text-white">Blog</a>
+                   </li>
+                   <li class="list-inline-item">
+                       <a href="#miscellaneous" class="text-white">Miscellaneous</a>
+                   </li>
+                   <li class="list-inline-item">
+                       <a href="#advertising" class="text-white">Advertising</a>
+                   </li>
+               </ul>
+           </div>
+
+           <!-- Enlaces de redes sociales -->
+           <div class="col-md-4 text-center text-md-end">
+               <h5>Síguenos</h5>
+               <div class="d-flex justify-content-center justify-content-md-end gap-3">
+                   <a href="https://twitter.com" target="_blank" class="text-white">
+                       <i class="bi bi-twitter fs-4"></i>
+                   </a>
+                   <a href="https://telegram.org" target="_blank" class="text-white">
+                       <i class="bi bi-telegram fs-4"></i>
+                   </a>
+                   <a href="https://facebook.com" target="_blank" class="text-white">
+                       <i class="bi bi-facebook fs-4"></i>
+                   </a>
+               </div>
+               <p class="mt-3 mb-0">&copy; <script>document.write(new Date().getFullYear())</script> Gems. Todos los derechos reservados.</p>
+           </div>
+       </div>
+   </div>
+</footer>
+
+     
+    <!-- Wrapper End-->
+    <!-- offcanvas start -->
+
+    <!-- Backend Bundle JavaScript -->
+    <script src="assets/js/core/libs.min.js"></script>
+    <script src="assets/js/core/external.min.js"></script>
+    
+    <!-- widgetchart JavaScript -->
+    <script src="assets/js/charts/widgetcharts.js"></script>
+    
+    <!-- GSAP Animation JS-->
+    <script src="assets/vendor/gsap/gsap.min.js"></script>
+    <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+    
+    <!-- fslightbox JavaScript -->
+    <script src="assets/js/fslightbox.js"></script>
+   
+    
+    <!-- Mapchart JavaScript -->
+    <script src="assets/js/charts/vector-chart.js"></script>
+    <script src="assets/js/charts/dashboard.js"></script>
+    
+    <!-- app JavaScript -->
+    <script src="assets/js/coinex.js"></script>
+    
+    <!-- apexchart JavaScript -->
+    <script src="assets/js/charts/apexcharts.js"></script>
+    
+    <!-- Gsap Animation Init -->
+    <script src="assets/js/gsap.js"></script>  </body>
+
+</html>
